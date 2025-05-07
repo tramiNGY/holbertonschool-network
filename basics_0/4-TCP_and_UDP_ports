@@ -1,2 +1,9 @@
 #!/bin/bash
-sudo ss -tuln -p
+
+# Afficher les ports d'écoute avec le PID et le nom du programme
+ss -tuln | awk 'NR>1 {print $1, $5, $6, $7}' | while read line; do
+    # Extraire le PID et le nom du programme
+    pid=$(echo $line | awk '{print $4}' | cut -d':' -f2)
+    program=$(ps -p $pid -o comm=)
+    echo "$line $pid/$program"
+done
