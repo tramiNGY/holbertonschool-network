@@ -1,7 +1,11 @@
 #!/usr/bin/env bash
-# This script recieves arg and check if other network devices are available.
-if [ -z "$1" ]; then
+# Bash script that that pings an IP address passed as an argument.
+if [ $# -eq 0 ];
+then
     echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
     exit 1
 fi
-ping -c 5 "$1"
+
+ip_address=$1
+
+ping -c 5 -i 1 "$ip_address"
