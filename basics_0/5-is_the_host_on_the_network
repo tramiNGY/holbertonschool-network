@@ -1,2 +1,10 @@
 #!/bin/bash
-sudo ss -tuln -p
+
+# Check if an argument (IP address) is passed
+if [ -z "$1" ]; then
+    echo "Usage: 5-is_the_host_on_the_network {IP_ADDRESS}"
+    exit 1
+fi
+
+# Ping the IP address passed as an argument 5 times
+ping -c 5 "$1"
