@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 HOSTS_FILE="/etc/hosts"
 sudo sed -i '/localhost/d' "$HOSTS_FILE"
 sudo sed -i '/facebook.com/d' "$HOSTS_FILE"
