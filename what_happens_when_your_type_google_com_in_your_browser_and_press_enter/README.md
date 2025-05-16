@@ -10,7 +10,7 @@ When typing in web browser https://www.google.com, you need to convert this huma
 
 **Step 2: DNS getting IP address**
 
-If not in DNS cache, the computer will ask DNS resolver, searching first TLD (Top-Level Domain) here, .com, and finally get DNS server IP for google.com and return IP : 8.8.8.8
+If not in DNS cache, the computer will ask DNS resolver, searching first TLD (Top-Level Domain) here, .com, and finally get DNS server IP for google.com and return IP: 142.250.64.78
 
 The computer now knows where to send the request.
 
